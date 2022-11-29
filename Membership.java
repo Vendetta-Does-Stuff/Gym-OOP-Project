@@ -18,6 +18,6 @@ public class Membership {
 	}
 
 	public String getBenefits() {
-		return this.benefits.toString();
+		return this.benefits;
 	}
 }
