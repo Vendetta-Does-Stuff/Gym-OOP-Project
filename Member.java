@@ -15,7 +15,7 @@ public class Member {
 	}
 
 	public String getName() {
-		return this.name.toString();
+		return this.name;
 	}
 
 	public String getBirthDay() {
@@ -67,26 +67,25 @@ public class Member {
 		}
 	}
 
-	public void getInfo() {
+	public void printInfo() {
 		System.out.printf("%s was born in %s and is %d years old.\n", this.getName(), this.getBirthDay(), this.getAge());
 		if (membership != null) {
 			System.out.printf("%s has purchased the %s membership for %d dollars a month and has received the following benefit(s): %s.\n", this.getName(), this.getMembership(), this.getMembershipCost(), this.getMembershipBenefits());
 			System.out.printf("%s scores a %f in strength, %f in speed, and %f in endurance.\n", this.getName(), this.getStrength(), this.getSpeed(), this.getEndurance());
 		} else {
-			System.out.printf("%s is not a member.\n", this.getName());
+			System.out.printf("%s has not purchased a membership.\n", this.getName());
 		}
 	}
 
-	public void getStats() {
+	public void printStats() {
 		if (membership != null) {
 			System.out.printf("%s scores a %f in strength, %f in speed, and %f in endurance.\n", this.getName(), this.getStrength(), this.getSpeed(), this.getEndurance());
 		} else {
-			System.out.printf("%s is not a member.\n", this.getName());
+			System.out.printf("%s has not purchased a membership.\n", this.getName());
 		}
 	}
 
 	public void purchaseMembership(Membership membership) {
 		this.membership = membership;
 	}
-
 }
